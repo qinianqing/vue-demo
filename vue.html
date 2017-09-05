@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>vue-demo</title>
+    <script src='vue.js'></script>
+</head>
+
+<body>
+    <div id="bind2">
+        <p>{{mon}}</p >
+        <input type="text" v-model="mon">
+        <button v-on:click="setMon('三月')">三月</button>
+        <button v-on:click="setMon('六月')">六月</button>
+        <button v-on:click="setMon('十二月')">十二月</button>
+    </div>
+
+    <script>
+        const b2 = new Vue({
+            el: '#bind2',
+            data: { mon: '？' },
+            methods: {
+                setMon(m) {
+                    this.mon = m
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
